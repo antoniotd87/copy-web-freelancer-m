@@ -1,0 +1,408 @@
+:root {
+  --fondo1: #2b2c2c;
+  --fondo2: #303131;
+  --secundario: #feb633;
+  --claro: #fff;
+  --texto: rgb(177, 177, 177);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 8rem;
+  background-color: var(--secundario);
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+h1 {
+  font-size: 5rem;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Globales */
+.bg-1 {
+  background-color: var(--fondo1);
+}
+.bg-2 {
+  background-color: var(--fondo2);
+}
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.boton {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+.btn-amarillo {
+  background-color: var(--secundario);
+  color: var(--claro);
+  border: 2px solid var(--secundario);
+  transition: all 0.2s ease-in-out;
+}
+.btn-amarillo:hover {
+  background-color: transparent;
+  color: var(--secundario);
+}
+.btn-negro {
+  color: var(--secundario);
+  border: 2px solid var(--secundario);
+  transition: all 0.2s ease-in-out;
+}
+.btn-negro:hover,
+.btn-blanco:hover {
+  background-color: var(--secundario);
+  color: var(--claro);
+}
+.btn-blanco {
+  background-color: var(--claro);
+  color: var(--fondo1);
+  transition: all 0.2s ease-in-out;
+}
+/* Header */
+.header .barra {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  align-items: center;
+}
+.header .barra .logo img {
+  max-width: 100%;
+}
+.barra .navegacion {
+  flex-basis: 40%;
+}
+.barra .navegacion ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+.barra .navegacion ul a {
+  color: var(--claro);
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.barra .navegacion ul a:hover {
+  color: var(--secundario);
+}
+.barra .navegacion ul a::after {
+  content: "";
+  width: 2rem;
+  height: 0.1rem;
+  background-color: var(--secundario);
+  display: block;
+  margin-top: 10px;
+}
+.developed {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(5, auto);
+  width: 100%;
+  color: var(--texto);
+  grid-column-gap: 4rem;
+}
+.developed h1 {
+  grid-row: 2/3;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: var(--claro);
+}
+.developed p {
+  grid-row: 3/4;
+  font-size: 2rem;
+  margin-top: 0.3rem;
+}
+.developed a {
+  grid-row: 4/5;
+}
+.developed .img {
+  grid-column: 2/3;
+  grid-row: 1/6;
+  max-width: 90%;
+}
+.developed .btn-amarillo {
+  width: 50%;
+  font-size: 1.5rem;
+}
+/* Sobre mi */
+.about-me {
+  max-width: 1000px;
+  padding: 4rem 0;
+  display: flex;
+  color: var(--texto);
+  justify-content: space-between;
+  align-items: center;
+}
+.about-me .titulo {
+  flex: 0 0 38%;
+  text-align: center;
+}
+.about-me .contenido .info {
+  margin-bottom: 3rem;
+}
+.about-me .contenido a {
+  margin-right: 2rem;
+}
+/* Servicios */
+.servicios {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  grid-template-rows: repeat(2, auto);
+  padding: 6rem 0;
+}
+.servicios .info {
+  grid-column: 2/3;
+  color: var(--texto);
+  padding-bottom: 2rem;
+}
+.servicios .habilidades {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  color: var(--claro);
+}
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.habilidades .card {
+  flex-basis: 49%;
+  margin: 0.5rem 0;
+  border-radius: 15px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.habilidades .contenido {
+  text-align: left;
+  padding: 3rem;
+}
+.habilidades .card:nth-child(1) {
+  background-image: url(../img/desarrollo-web.jpg);
+}
+.habilidades .card:nth-child(1) .fondo {
+  background-color: rgba(67, 199, 55, 0.92);
+  border-radius: 15px;
+}
+.habilidades .card:nth-child(2) {
+  background-image: url(../img/dapps.jpg);
+}
+.habilidades .card:nth-child(2) .fondo {
+  background-color: rgba(158, 40, 255, 0.92);
+  border-radius: 15px;
+}
+.habilidades .card:nth-child(3) {
+  background-image: url(../img/diseño-web.jpg);
+}
+.habilidades .card:nth-child(3) .fondo {
+  background-color: rgba(247, 175, 66, 0.92);
+  border-radius: 15px;
+  height: 100%;
+}
+.habilidades .card:nth-child(4) {
+  background-image: url(../img/uxdsgn.png);
+}
+.habilidades .card:nth-child(4) .fondo {
+  background-color: rgba(39, 216, 247, 0.92);
+  border-radius: 15px;
+}
+.habilidades .card h3 {
+  font-size: 2rem;
+}
+/* Ultimos Trabajos */
+.servicios .works {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 1rem;
+}
+.servicios .works .big {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+.servicios .works .last {
+  grid-row: 3/4;
+  grid-column: 3/5;
+}
+.works .card-work {
+  position: relative;
+  overflow: hidden;
+}
+.works .card-work .imagen {
+  height: 100%;
+  width: 100%;
+}
+.works .card-work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.works .card-work .desc {
+  position: absolute;
+  bottom: -100%;
+  background-color: #f9ce24d8;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.works .card-work:hover .desc {
+  display: flex;
+  bottom: 0;
+}
+.works .card-work .desc p {
+  color: var(--claro);
+  font-weight: 700;
+  font-size: 2rem;
+}
+/* Experiencia */
+.servicios .experience {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  display: flex;
+  margin-top: 4rem;
+}
+.servicios .experience .card-exp {
+  border: 1px solid var(--texto);
+  padding: 4rem 2rem;
+  text-align: left;
+  color: var(--texto);
+  background-color: #2f3030;
+}
+.servicios .experience .card-exp .fecha {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.servicios .experience .card-exp .titulo {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: var(--claro);
+}
+.servicios .experience .card-exp .desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.servicios .experience .card-exp:hover {
+  background-color: var(--secundario);
+  border: 1px solid var(--secundario);
+  color: var(--fondo2);
+}
+.servicios .experience .card-exp:hover .titulo {
+  color: var(--fondo2);
+}
+
+/* Contratame */
+.contratame {
+  height: 450px;
+  justify-content: center;
+  align-content: center;
+}
+.contratame .info h2 {
+  padding-bottom: 3rem;
+}
+.contratame .info h2::after {
+  background-color: var(--claro);
+}
+/* Contact */
+.servicios .contacto {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  color: var(--texto);
+}
+.servicios .contacto .info-izq {
+  text-align: left;
+  flex-basis: 30%;
+}
+.servicios .contacto .info-izq h4 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.servicios .contacto .info-izq p {
+  padding-left: 1rem;
+}
+.servicios .contacto .sociales ul{
+    padding: 0;
+}
+.servicios .contacto .sociales i{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.servicios .contacto .form {
+  flex-basis: 67%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.contacto .form .form-group {
+}
+.contacto .form .form-group label {
+  display: block;
+  padding-bottom: 1rem;
+}
+.contacto .form .form-group input[type="text"],
+textarea {
+  width: 100%;
+  background-color: var(--fondo2);
+  border: none;
+  color: var(--claro);
+  padding: 1.5rem;
+}
+.contacto .form .form-group:nth-child(1) {
+  grid-column: 1/3;
+}
+.contacto .form .form-group:nth-child(4) {
+  grid-column: 1/3;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.servicios .contacto .form a {
+  width: 50%;
+}
+/* footer */
+.footer{
+    text-align: center;
+    color: var(--texto);
+    border-top: 1px solid  #464747;
+    padding: 1.5rem 0 ;
+}
+.footer span {
+    color: var(--secundario);
+}
